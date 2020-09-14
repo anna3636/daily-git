@@ -11,23 +11,23 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
-@Table(name="employees")
+@Table(name = "employees")
 @NamedQueries({
     @NamedQuery(
-            name="getAllEmployees",
-            query="SELECT e FROM Employee AS e ORDER BY e.id DESC"
+            name = "getAllEmployees",
+            query = "SELECT e FROM Employee AS e ORDER BY e.id DESC"
             ),
     @NamedQuery(
-            name="getEmployeeCount",
-            query="SELECT COUNT(e) FROM Employee AS e WHERE e.code=:code"
+            name = "getEmployeesCount",
+            query = "SELECT COUNT(e) FROM Employee AS e"
             ),
     @NamedQuery(
             name = "checkRegisteredCode",
             query = "SELECT COUNT(e) FROM Employee AS e WHERE e.code = :code"
             ),
     @NamedQuery(
-            name="checkLoginCodeAndPassword",
-            query="SELECT e FROM Employee As e WHERE e.delete_flag=0 AND e.code=:code AND e.password=:pass"
+            name = "checkLoginCodeAndPassword",
+            query = "SELECT e FROM Employee AS e WHERE e.delete_flag = 0 AND e.code = :code AND e.password = :pass"
             )
 })
 @Entity
