@@ -14,7 +14,7 @@
  <br/><br/>
 
  <label for="name">氏名</label><br/>
- <c:out value="${sessionScope.login_emploee.name }"/>
+ <c:out value="${sessionScope.login_employee.name }"/>
  <br/><br/>
 
  <label for="title">タイトル</label><br/>
